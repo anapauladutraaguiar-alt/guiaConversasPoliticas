@@ -1,85 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Coleção de vídeos e materiais para conversas sobre política, economia, meio ambiente e democracia.">
+<meta name="description" content="Vídeos e materiais reunidos por perfil de público, para apoiar conversas sobre política com curiosidade, respeito e pensamento crítico.">
 <title>Guia de vídeos para conversas políticas</title>
 <style>
-:root{--ink:#17231f;--muted:#5d6b65;--paper:#f7f6f1;--card:#fff;--green:#176b52;--lime:#d8edb8;--line:#e1e5df;--orange:#efb17d}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{background:var(--green);color:#fff;padding:52px 22px 42px}.wrap{max-width:1080px;margin:auto}
-.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:750;color:var(--lime)}
-h1{font-size:clamp(2.2rem,5vw,4.3rem);line-height:1.02;letter-spacing:-.04em;max-width:760px;margin:14px 0}
-header p{max-width:680px;color:#e7f1eb;font-size:1.08rem;margin-bottom:0}
-main{padding:28px 22px 64px}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 26px}
-input,select{font:inherit;border:1px solid #cbd5ce;border-radius:12px;padding:12px 14px;background:#fff;color:var(--ink)}
-input{flex:1;min-width:220px}select{min-width:210px}
-.note{background:#eef3e8;border-left:4px solid var(--orange);padding:14px 17px;border-radius:0 10px 10px 0;color:#3e4d45;margin-bottom:28px}
-.section-head{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:32px 0 14px}
-h2{font-size:1.5rem;letter-spacing:-.02em;margin:0}.count{font-size:.9rem;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;min-height:190px;box-shadow:0 3px 12px #17231f08}
-.tag{align-self:flex-start;background:var(--lime);color:#234e39;padding:4px 9px;border-radius:99px;font-size:.76rem;font-weight:700;margin-bottom:10px}
-.card h3{font-size:1.12rem;line-height:1.3;margin:0 0 8px}.card p{margin:0 0 18px;color:var(--muted);font-size:.94rem}
-.card a{margin-top:auto;color:var(--green);font-size:1.12rem;font-weight:800;text-decoration:none;display:inline-flex;gap:7px;align-items:center}
-.card a:hover{text-decoration:underline}.empty{display:none;padding:28px;text-align:center;color:var(--muted)}
-footer{border-top:1px solid var(--line);padding:24px 22px;color:var(--muted);font-size:.9rem}
-.small{font-size:.85rem;color:var(--muted)}@media(max-width:600px){header{padding-top:36px}.section-head{align-items:start;flex-direction:column}}
+:root{--ink:#24312d;--muted:#64736c;--green:#236b4b;--green-dark:#174d36;--mint:#eaf3ed;--paper:#fbfaf7;--line:#dfe7e1;--white:#fff;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(120deg,#174d36,#2d7653);color:white;padding:38px 22px 32px}
+.header-inner{max-width:1120px;margin:auto}
+h1{font-family:Georgia,serif;font-weight:600;font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:0 0 12px}
+.subtitle{font-size:1.08rem;max-width:720px;color:#e4efe8;margin:0}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:auto;padding:12px 22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.nav-instruction{flex:0 0 100%;margin:0 0 2px;color:var(--green-dark);font-weight:650;font-size:.96rem}
+nav label{font-size:.9rem;font-weight:650;color:var(--muted)}
+select,input{font:inherit;border:1px solid #cbd8cf;border-radius:10px;background:white;color:var(--ink);padding:10px 13px;min-height:44px}
+select{max-width:340px;flex:1 1 260px}
+input{flex:1 1 240px;min-width:180px}
+.about-button{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;min-height:44px;border-radius:10px;background:var(--green);color:white;text-decoration:none;font-weight:700;white-space:nowrap}
+.about-button:hover{background:var(--green-dark)}
+main{max-width:1120px;margin:0 auto;padding:32px 22px 70px}
+.intro{margin:0 0 24px;color:var(--muted)}
+.section-heading{font-family:Georgia,serif;font-size:1.8rem;font-weight:600;margin:30px 0 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 3px 14px rgba(26,57,40,.045);display:flex;flex-direction:column;min-width:0}
+.audience-label{font-size:1.16rem;line-height:1.35;font-weight:800;color:#16834a;margin:0 0 14px}
+.count{font-size:.82rem;color:var(--muted);font-weight:500;margin-left:5px;white-space:nowrap}
+.materials{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.materials li{padding-top:11px;border-top:1px solid #edf1ed}
+.materials li:first-child{border-top:0;padding-top:0}
+.material-title{font-weight:550;display:block;margin-bottom:6px;overflow-wrap:anywhere}
+.open-link{display:inline-block;color:var(--green);font-size:.93rem;font-weight:700;text-decoration:none;border-bottom:1px solid #9abda8;padding-bottom:1px}
+.open-link:hover{color:var(--green-dark);border-color:var(--green-dark)}
+.no-link{font-size:.9rem;color:var(--muted);font-style:italic}
+.info-section{margin-top:58px;padding-top:28px;border-top:1px solid var(--line)}
+.info-section h2{font-family:Georgia,serif;font-size:1.8rem;font-weight:600;margin:0 0 16px}
+.info-section p{max-width:850px}
+.curator{font-weight:700;color:var(--green-dark)}
+footer{background:#eef3ef;color:var(--muted);padding:22px;text-align:center;font-size:.88rem}
+.empty{padding:28px;text-align:center;color:var(--muted);background:white;border:1px dashed var(--line);border-radius:14px}
+@media(max-width:620px){header{padding:30px 18px 26px}.nav-inner{padding:10px 14px;gap:8px}nav label{width:100%}select,input{flex:1 1 100%;max-width:none}.about-button{margin-left:0}main{padding:25px 16px 55px}.card{padding:18px}}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-<div class="eyebrow">Guia de recursos para conversas</div>
-<h1>Guia de vídeos para conversas políticas</h1>
-<p>Vídeos e materiais reunidos por perfil de público, para apoiar conversas sobre temas públicos com curiosidade, respeito e pensamento crítico.</p>
-</div></header>
-<main class="wrap">
-<div class="note"><strong>Como usar:</strong> selecione um tema/público-alvo ou busque por palavra-chave ou título.</div>
-<div class="toolbar">
-<select id="filter" aria-label="Filtrar por tema"><option value="">Todos os temas</option></select>
-<input id="search" type="search" placeholder="Buscar tema, título ou fonte…" aria-label="Buscar materiais">
-</div>
-<div class="section-head"><h2>Materiais</h2><span class="count" id="count" aria-live="polite"></span></div>
-<div class="grid" id="grid"></div><div class="empty" id="empty">Nenhum material encontrado. Tente outra busca.</div>
+<header>
+ <div class="header-inner">
+  <h1>Guia de vídeos para conversas políticas</h1>
+  <p class="subtitle">Vídeos e materiais reunidos por perfil de público, para apoiar conversas sobre política com curiosidade, respeito e pensamento crítico.</p>
+ </div>
+</header>
+<nav aria-label="Navegação e filtros">
+ <div class="nav-inner">
+  <p class="nav-instruction">Selecione um público-alvo ou busque por palavra-chave ou título.</p>
+  <label for="categoryFilter">Público-alvo</label>
+  <select id="categoryFilter"><option value="">Todos os públicos</option></select>
+  <input id="searchInput" type="search" placeholder="Buscar por palavra-chave ou título…" aria-label="Buscar vídeos">
+  <a class="about-button" href="#sobre">Sobre</a>
+ </div>
+</nav>
+<main>
+ <h2 class="section-heading" id="videos">Vídeos/posts por público-alvo</h2>
+ <div class="cards" id="cards"></div>
+ <section class="info-section" id="agradecimentos">
+  <h2>Agradecimentos especiais</h2>
+  <p>Alessandra Orofino, por toda a excepcional série Revelando. Vídeos completos aqui:<a href="https://www.youtube.com/@revelando_br" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@revelando_br</a>. Reels: <a href="https://www.instagram.com/revelando.brasil/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/revelando.brasil/</a></p><p>Ana Maria Braga pelo vídeo sobre o voto feminino: <a href="https://www.instagram.com/reels/De45w-8h27e/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/reels/De45w-8h27e/</a></p><p>Marianna Armellini, pelos vídeos brilhantes da assessora de imprensa: <a href="https://www.instagram.com/mariarmellini/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/mariarmellini/</a></p>
+ </section>
+ <section class="info-section" id="sobre">
+  <h2>Sobre este site</h2>
+  <p class="curator">Curadoria: Ana Paula D. Aguiar @apd.aguiar</p><p>Muitos vídeos excelentes foram produzidos por todo o campo progressista durante as eleições presidenciais de 2026, especialmente no segundo turno. Compilei uma lista com alguns para ajudar a começar ou continuar conversas sobre política com quem não votou no Lula ou votou a contragosto  —  conversas que respeitem a inteligência do próximo e tentem desfazer tanta desinformação nas bolhas.</p><p>A ideia surgiu de conversas com minha filha e minha mãe naquele desespero de tentar virar votos. Inicialmente, pensei em fazer um fluxograma sobre “o que mandar para quem”. Comecei a esboçar, mas não tive tempo nem cabeça. Era tudo “URGENTE!!” 🙂</p><p>Mas acho que ainda cabe, talvez tanto quanto antes.  Porque, como disse o General Janones, ganhamos uma batalha importantíssima, mas a guerra... Temos de desmontar a bomba do bolsonarismo (do agro-bolsonarismo, em particular) e conquistar os corações e as mentes dos que votaram do lado de lá e de cá sem muita convicção (com os muito convictos —  bolsonaristas raiz — nem adianta).</p><p>Lado de cá, porque sim, eu tenho lado. Não acredito em neutralidade. Como cidadã, quero um país muito diferente. Sem desigualdade, sem pobreza. Com Saúde Pública, com Educação Pública Fundamental e Secundária de qualidade, com Universidades Públicas no topo dos rankings mundiais, com uma Ciência do tamanho do nosso país, com indústria!  Com uma agricultura que preserve todos os biomas brasileiros, não polua e gere riqueza para muitos. E muito mais.</p><p>Sugestões: enviar DM para @apd.aguiar. Mensagens e comentários mal-educados serão ignorados.</p>
+ </section>
 </main>
-<footer><div class="wrap">Guia independente de links. Os vídeos e materiais pertencem às plataformas e aos seus respectivos autores. Esta página não verifica nem endossa automaticamente o conteúdo dos links.</div></footer>
+<footer>Guia de vídeos para conversas políticas</footer>
 <script>
-const resources = [
-{topic:"Produtores rurais (médios e pequenos)",title:"Vania Bogorny: vídeo sobre o ódio ao Lula",source:"Instagram",url:"https://www.instagram.com/p/DeAczn2v1US/"},
-{topic:"Produtores rurais (médios e pequenos)",title:"Juliana: agricultura familiar e agronegócio",source:"Instagram",url:"https://www.instagram.com/reel/Deg6pLIx4Ln/"},
-{topic:"Produtores rurais (médios e pequenos)",title:"Para entender de onde vem o agrobolsonarismo",source:"BBC News Brasil",url:"https://www.bbc.com/portuguese/articles/c5vgyl2gk7jyo"},
-{topic:"Pessoal de direita mas não bolsonarista",title:"Kobori",source:"Instagram",url:"https://www.instagram.com/p/DeZFFKVDNN7/"},
-{topic:"Pessoal de direita mas não bolsonarista",title:"Kobori: o que é direita e meritocracia",source:"Instagram",url:"https://www.instagram.com/reel/De48SX5AfB9/?srtk=MW03aHlnb2Rzdno2"},
-{topic:"Pessoal de direita mas não bolsonarista",title:"Outro material",source:"Instagram",url:"https://www.instagram.com/p/DeRq61Qx22u/"},
-{topic:"Pessoal de direita mas não bolsonarista",title:"Outro material",source:"Instagram",url:"https://www.instagram.com/p/DeO6kD4OxHD/"},
-{topic:"Classe média que se acha elite",title:"Kobori",source:"Instagram",url:"https://www.instagram.com/p/DeSTVoXSm9M/"},
-{topic:"Para nacionalistas (foco na soberania)",title:"Elias Jabor",source:"Instagram",url:"https://www.instagram.com/p/DbMAwetAqc5/"},
-{topic:"Para nacionalistas (foco na soberania)",title:"Revelando Wagner Moura",source:"Instagram",url:"https://www.instagram.com/p/DekJCYSRCzD/"},
-{topic:"Quem não gosta do PT por causa da corrupção",title:"Sobre os crimes do Lula (título da lista original)",source:"Instagram",url:"https://www.instagram.com/p/De4OGEei6uh/"},
-{topic:"Quem não gosta do PT por causa da corrupção",title:"Compilação dos crimes do FB (título da lista original)",source:"Instagram",url:"https://www.instagram.com/p/Dd_xaaVtsqR/"},
-{topic:"Quem não gosta do PT por causa da corrupção",title:"Revelando Fabio Porchat (Laranjas)",source:"YouTube",url:"https://youtu.be/wD03BsbjizA?si=PS13KgMoZktGQDoh"},
-{topic:"Quem não gosta do PT por causa da corrupção",title:"Negócios na pandemia (vídeo do Átila e matéria da Piai)",source:"Instagram",url:"https://www.instagram.com/reel/De11F-AJvn2/?obrf=aWkzbnlyOHE0cWJj"},
-{topic:"Católicos de direita (intolerância)",title:"Revelando Juliete (intolerância religiosa)",source:"YouTube",url:"https://youtu.be/j4Y2XoS_KIY?si=oHwr6hEnDncDGZER"},
-{topic:"Preocupados com o meio ambiente",title:"Observatório do clima",source:"Instagram",url:"https://www.instagram.com/reel/DexpKWfRMIF/"},
-{topic:"Mulheres preocupadas com armas",title:"Revelando Alessandr (armas em geral)",source:"Instagram",url:"https://www.instagram.com/p/De4SC_8R_Z8/"},
-{topic:"Mulheres preocupadas com armas",title:"Revelando Camila Pitanga (caso Ana Clara)",source:"YouTube",url:"https://www.youtube.com/watch?v=N6f6L80pXns"},
-{topic:"Outros",title:"Bispos — gostam de praia e não são elitistas: Observatório do clima (privatização)",source:"Instagram",url:"https://www.instagram.com/reel/DezQZAQNiQs/"},
-{topic:"Outros",title:"Revelando (Luana Piovani)",source:"YouTube",url:"https://www.youtube.com/watch?v=Hgax1j4T5Hk"},
-{topic:"Classe C e D",title:"Medidas econômicas do governo Lula (MEI, 6x1 etc.)",source:"Sem link no documento original",url:""},
-{topic:"Classe C e D",title:"Discursos Lula",source:"Sem link no documento original",url:""},
-{topic:"Classe C e D",title:"Dados do custo de vida, números",source:"Sem link no documento original",url:""},
-{topic:"Evangélicos",title:"Pastor Henrique",source:"Sem link no documento original",url:""},
-{topic:"Evangélicos",title:"Outros esquemas",source:"Sem link no documento original",url:""},
-{topic:"Quem gosta do MBL",title:"Vídeo Djamilla Ribeiro",source:"Instagram",url:"https://www.instagram.com/p/DfDXYZxi7IX/"},
-{topic:"Outros",title:"Toda série Revelando é sensacional (descrição da lista original)",source:"YouTube",url:"https://www.youtube.com/@revelando_br"},
-{topic:"Outros",title:"Os (mal) feitos do Flávio Bolsonaro",source:"Instagram",url:"https://www.instagram.com/p/DdJUE0VxjqR/"},
-{topic:"Outros",title:"Vídeo da Mônica Iozzi",source:"Instagram",url:"https://www.instagram.com/p/De49Px_pnys/"},
-{topic:"Outros",title:"Vídeo da Ana Maria Braga",source:"Instagram",url:"https://www.instagram.com/reels/De45w-8h27e/"}
-];
-const grid=document.getElementById('grid'),search=document.getElementById('search'),filter=document.getElementById('filter'),count=document.getElementById('count'),empty=document.getElementById('empty');
-[...new Set(resources.map(r=>r.topic))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;filter.appendChild(o)});
-function render(){const q=search.value.trim().toLocaleLowerCase('pt-BR'),f=filter.value;const list=resources.filter(r=>(!f||r.topic===f)&&(!q||[r.topic,r.title,r.source].join(' ').toLocaleLowerCase('pt-BR').includes(q)));grid.innerHTML='';list.forEach(r=>{const card=document.createElement('article');card.className='card';const tag=document.createElement('span');tag.className='tag';tag.textContent=r.topic;const h=document.createElement('h3');h.textContent=r.title;const p=document.createElement('p');p.textContent=r.source;if(r.url){const a=document.createElement('a');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Abrir material ↗';card.append(tag,h,p,a)}else{const missing=document.createElement('span');missing.className='small';missing.textContent='Link não informado no documento';card.append(tag,h,p,missing)}grid.appendChild(card)});count.textContent=`${list.length} ${list.length===1?'material':'materiais'}`;empty.style.display=list.length?'none':'block'}
-search.addEventListener('input',render);filter.addEventListener('change',render);render();
+const categories = [{"name": "Para produtores rurais (médios e pequenos)", "items": [{"title": "Por que esse ódio ao Lula? (Vania Bogorny)", "url": "https://www.instagram.com/p/DeAczn2v1US/"}, {"title": "Diferença entre agricultura familiar e agronegócio (Juliana)", "url": "https://www.instagram.com/reel/Deg6pLIx4Ln/"}, {"title": "Como a vida dos agricultores mudou  (Monica Iozzi sobre os pais dela)", "url": "https://www.instagram.com/p/De49Px_pnys/"}]}, {"name": "Para antipetistas clássicos", "items": [{"title": "Sobre os crimes do Lula (Elton Freitas)", "url": "https://www.instagram.com/p/De4OGEei6uh/"}, {"title": "Sobre os crimes do Lula e o Lulinha (Leo Chacra)", "url": "https://www.instagram.com/p/Dej_8SmpMUZ/"}, {"title": "Sobre quem dominou o país por 500 anos (Lula, vídeo de 89)", "url": "https://www.instagram.com/p/DLx65Iex5iq/"}]}, {"name": "Para pessoal de direita", "items": [{"title": "O que é ser de direita (José Kobori)", "url": "https://www.instagram.com/p/DeZFFKVDNN7/"}, {"title": "Diferença entre direita e esquerda (José Kobori)", "url": "https://www.instagram.com/reel/De48SX5AfB9/?srtk=MW03aHlnb2Rzdno2"}, {"title": "Diferença entre direita e bolsonarismo (Beta Boechat)", "url": "https://www.instagram.com/p/DeRq61Qx22u/"}, {"title": "Diferença entre direita e bolsonarismo (Ana Elisa)", "url": "https://www.instagram.com/p/DeO6kD4OxHD/"}]}, {"name": "Para quem acredita que o governo gasta demais", "items": [{"title": "Sobre taxa de juros e dívida pública (Leo Chacra)", "url": "https://www.instagram.com/p/DeNEMQBp3lN/"}, {"title": "A irracionalidade da “responsabilidade fiscal”  (Jones Manoel)", "url": "https://www.youtube.com/watch?v=HNnlqeZR9HY"}, {"title": "O que era o tesouraço (Jones Manoel)", "url": "https://www.instagram.com/p/DepEBEIFW0Q/?vrfl=MW9iMm4wdmcxbzl4dw%3D%3D&img_index=1"}, {"title": "Goveno Milei (PTBrasil)", "url": "https://www.instagram.com/reels/De16TmxtpUe/"}]}, {"name": "Para quem acredita em meritocracia", "items": [{"title": "Milhares de vídeos de pessoas dando seus testemunhos. Exemplo: Dr. Rafael Vasconcelos", "url": "https://www.instagram.com/p/DefcFFGlkFD/?img_index=1"}]}, {"name": "Para nacionalistas (foco na soberania)", "items": [{"title": "Elias Jabor", "url": "https://www.instagram.com/p/DbMAwetAqc5/"}, {"title": "Revelando: Pátria Submissa (Revelando/Wagner Moura - Reels)", "url": "https://www.instagram.com/p/DekJCYSRCzD/"}]}, {"name": "Para quem (ainda) acredita no Flávio Bolsonaro", "items": [{"title": "Revelando: República dos Laranjas (Revelando/Fábio Porchat)", "url": "https://youtu.be/wD03BsbjizA?si=PS13KgMoZktGQDoh"}, {"title": "Negócios não negacionismo (Atila)", "url": "https://www.instagram.com/reel/De11F-AJvn2/?obrf=aWkzbnlyOHE0cWJj"}, {"title": "Compilação dos crimes do Flávio Bolsonaro (pt-brasil)", "url": "https://www.instagram.com/p/Dd_xaaVtsqR/"}, {"title": "Os (mal) feitos do Flávio Bolsonaro (Tatiana Roque)", "url": "https://www.instagram.com/p/DdJUE0VxjqR/"}, {"title": "Sobre o tal “Estado de exceção”: (Galãs Feios/Globo News)", "url": "https://www.youtube.com/watch?v=RUGwDNOeRRo"}]}, {"name": "Para quem não entende o fascismo", "items": [{"title": "Raízes do fascismo atua (Bruno Altman/Vladimir Safatle)", "url": "https://www.youtube.com/watch?v=y5razz-k9Rg"}, {"title": "Não são ressentidos (entrevista com Vladimir Safatle)", "url": "https://www.youtube.com/watch?v=e9To7rGNgBo"}]}, {"name": "Para quem se ilude com o Renan Santos", "items": [{"title": "Memória sobre quem é Renan (Djamilla Ribeiro)", "url": "https://www.instagram.com/p/DfDXYZxi7IX/"}, {"title": "Oportunismo e reposicionamento (Jones Manoel)", "url": "https://youtu.be/OgzsRzZzV5Y?si=GCSI9HTr2bANSCGX"}]}, {"name": "Para empreendedores de pequeno porte", "items": [{"title": "Você é classe trabalhadora (José Kobori)", "url": "https://www.instagram.com/p/DeSTVoXSm9M/"}, {"title": "Explicando proposta sobre dívida das MEIs (José Kobori,", "url": "https://www.instagram.com/p/DegzYyIDNIn/"}]}, {"name": "Para quem critica políticas sociais do governo Lula", "items": [{"title": "Bolsa Família (José Kobori)", "url": "https://www.youtube.com/watch?v=DCcXgbFF9Jw"}, {"title": "Quem ganha com a precarização da saúde e educação (José Kobori)", "url": "https://www.youtube.com/watch?v=kF2LIyBG7ac"}]}, {"name": "Para quem acha que o Brasil está em crise", "items": [{"title": "Economia muito melhor que no governo Bolsonaro (Eduardo Moreira, )", "url": "https://www.instagram.com/p/DesRBwbSKKa/"}, {"title": "Fala do banqueiro Adriano Esteves (Presley Vasconcellos) )", "url": "https://www.instagram.com/reels/DepvEqhRAVy/"}]}, {"name": "Para quem não acredita em feminicídio e não entende questões de gênero:", "items": [{"title": "Entrevista Rita Von Hunt  no Programa 20 Minutos do Bruno Altman", "url": "https://youtu.be/nVdhfn9vk3k?si=-5oa1bv8uLw3wCGv"}]}, {"name": "Para mães preocupadas com a violência/armas", "items": [{"title": "Revelando: Uma Dor Familiar (Revelando/Alessandra Orofino - Completo)", "url": "https://www.instagram.com/p/De4SC_8R_Z8/"}, {"title": "Revelando: O Julgamento que Nunca Aconteceu, Caso Ana Clara (Camila Pitanga - Reels)", "url": ""}, {"title": "Revelando: O Julgamento que Nunca Aconteceu, Caso Ana Clara (Camila Pitanga - Completo)", "url": "https://www.youtube.com/watch?v=N6f6L80pXns"}]}, {"name": "Para cristãos", "items": [{"title": "Cristãos pela democracia (Pastor Henrique Vieira)", "url": "https://www.instagram.com/reels/DewQHpThESW/"}, {"title": "Não em nosso nome (Pastor Henrique Vieria)", "url": "https://www.instagram.com/p/DeWytcaR2uw/"}, {"title": "Revelando: Guerra à Santa (Revelando/Juliette - Completo)", "url": "https://youtu.be/j4Y2XoS_KIY?si=oHwr6hEnDncDGZER"}]}, {"name": "Para quem se preocupa com o meio ambiente e povos indígenas", "items": [{"title": "Vale a pena ver de novo - sobre Jair Bolsonaro (Observatório do Clima)", "url": "https://www.instagram.com/reel/DexpKWfRMIF/"}, {"title": "Fim da Amazônia (DW/Claudio Angelo do Observatório do Clima)", "url": "https://www.instagram.com/p/DeuiOzxDSaH/"}]}, {"name": "Para quem gosta de praia (e não é elitista)", "items": [{"title": "Observatório do Clima (privatização)", "url": "https://www.instagram.com/reel/DezQZAQNiQs/"}, {"title": "Revelando: Quem quer roubar sua praia (Luana Piovani)", "url": "https://www.youtube.com/watch?v=Hgax1j4T5Hk"}]}];
+const filter = document.getElementById('categoryFilter');
+const search = document.getElementById('searchInput');
+const cards = document.getElementById('cards');
+categories.forEach((c,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=c.name;filter.appendChild(o)});
+function render(){
+ const selected=filter.value, q=search.value.trim().toLocaleLowerCase('pt-BR');
+ cards.innerHTML='';
+ let shown=0;
+ categories.forEach((c,i)=>{
+  if(selected!=='' && selected!==String(i)) return;
+  const matching=c.items.filter(item=>(c.name+' '+item.title).toLocaleLowerCase('pt-BR').includes(q));
+  if(!matching.length) return;
+  shown++;
+  const article=document.createElement('article');article.className='card';
+  const heading=document.createElement('h3');heading.className='audience-label';heading.textContent=c.name;
+  const count=document.createElement('span');count.className='count';count.textContent=matching.length+' '+(matching.length===1?'material':'materiais');heading.appendChild(count);
+  article.appendChild(heading);
+  const ul=document.createElement('ul');ul.className='materials';
+  matching.forEach(item=>{
+   const li=document.createElement('li');
+   const title=document.createElement('span');title.className='material-title';title.textContent=item.title;li.appendChild(title);
+   if(item.url){const a=document.createElement('a');a.className='open-link';a.href=item.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Abrir material ↗';li.appendChild(a)}
+   else{const n=document.createElement('span');n.className='no-link';n.textContent='Material sem link direto';li.appendChild(n)}
+   ul.appendChild(li);
+  });
+  article.appendChild(ul);cards.appendChild(article);
+ });
+ if(!shown){const e=document.createElement('div');e.className='empty';e.textContent='Nenhum material encontrado. Tente outra palavra ou público-alvo.';cards.appendChild(e)}
+}
+filter.addEventListener('change',render);search.addEventListener('input',render);render();
 </script>
-</body></html>
+</body>
+</html>
